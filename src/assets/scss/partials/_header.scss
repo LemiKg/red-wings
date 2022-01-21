@@ -1,0 +1,46 @@
+.header {
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        position: relative;
+
+        img {
+            width: 80%;
+        }
+        
+        .ribbon {
+            width: 100px;
+            height: 150px;
+            background-color: $ribbonColor;
+            position: absolute;
+            right: 100px;
+            top: -350px;
+            animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 2;
+                left: 0;
+                bottom: -50px;
+                border-left: 50px solid $ribbonColor;
+                border-right: 50px solid $ribbonColor;
+                border-bottom: 50px solid transparent;
+            }
+        }
+    }
+
+    @keyframes drop {
+        0% {
+            top: -350px;
+        }
+        100% {
+            top: 0;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+$primary-color: #ea2025;
+$secondary-color: #faaf42;
+$dark-color: #000;
+$light-color: #fff;
+$ribbonColor: $light-color;
+
+// $header-background: linear-gradient(45deg, $secondary-color 0%,  $primary-color 100%);
+$header-background: $primary-color;
+$subheader-background: rgba(250,175,66, .5);
+
