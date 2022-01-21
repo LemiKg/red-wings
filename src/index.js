@@ -17,9 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('#closeBtn');
     const modal = document.querySelector('#modal');
     const topNavigation = document.querySelector('#modal');
-    const subnavigation = document.querySelector('.sub-navigation');
     // const sticky = subnavigation.offsetTop;
-    const bgAnimationDiv = document.querySelector('.falling-wings');
 
     const displayModal = () => {
         if (!modal.classList.contains('active')) {
@@ -40,13 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //         subnavigation.classList.remove('sticky');
     //     }
     // }
-
-    const insertWings = numberOfWings => {
-        for (let i = 0; i < numberOfWings; i++) {
-            const currentClass = i % 2 ? 'left' : 'right';
-            bgAnimationDiv.innerHTML += `<span class='${currentClass} wing'></span>`;
-        }
-    }
 
     orderBtn.addEventListener('click', displayModal);
     closeBtn.addEventListener('click', hideModal);
