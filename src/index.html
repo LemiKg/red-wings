@@ -5,30 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Wings</title>
-    <link rel="stylesheet" href="assets/scss/style.css">
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
 <body class="landing">
     <header class="header">
         <div class="container">
             <div class="logo">
                 <div class="ribbon">
-                    <img src="assets/images/logo.png" alt="logo">
+                    <img src="assets/images/banner.png" alt="logo">
                 </div>
             </div>
             <nav class="navigation">
-                <a href="#about">TVOJ RED WINGS</a>
-                <a href="#menu">KARIJERA</a>
-                <a href="#contact">FAST FOOD STANICE</a>
+                <a class="nav-item" href="#about">TVOJ RED WINGS</a>
+                <a class="nav-item" href="#menu">KARIJERA</a>
+                <a class="nav-item" href="#contact">FAST FOOD STANICE</a>
+                <div class="order-button nav-item">
+                    <input type="button" value="Poruči Online">
+                </div>
             </nav>
-            <div class="order-button">
-                <input type="button" value="Poruči Online">
-            </div>
         </div>
     </header>
 
     <section class="cover">
-        
+        <div data-glide-el="track" class="glide__track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <img src="assets/images/cover.png" alt="cover image kofica">
+                </li>
+                <li class="glide__slide">
+                    <img src="assets/images/kragujevac.png" alt="cover image kofica">
+                </li>
+                <li class="glide__slide">
+                    <img src="assets/images/beograd.png" alt="cover image kofica">
+                </li>
+            </ul>
+        </div>
     </section>
 
     <section id="about">

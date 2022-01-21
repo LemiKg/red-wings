@@ -1,0 +1,19 @@
+.cover {
+    
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .glide__track {
+        height: 100%;
+
+        ul {
+            height: 100%;
+            
+            li {
+                object-fit: cover;
+            }
+        }
+    }
+}
