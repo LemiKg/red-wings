@@ -1,5 +1,7 @@
-$primary-color: #ea2025;
-$secondary-color: #faaf42;
+@import url('http://fonts.cdnfonts.com/css/rockwell-nova');
+
+$primary-color: #EB2026;
+$secondary-color: #FBAF42;
 $dark-color: #000;
 $light-color: #fff;
 $ribbonColor: $light-color;
@@ -8,3 +10,4 @@ $ribbonColor: $light-color;
 $header-background: $primary-color;
 $subheader-background: rgba(250,175,66, .5);
 
+$font-stack: 'Rockwell Nova', sans-serif;

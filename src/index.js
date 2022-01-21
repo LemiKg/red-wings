@@ -1,12 +1,24 @@
-import "./assets/scss/style.scss";
+import './assets/scss/style.scss';
+import Glide from '@glidejs/glide';
+
+const glide = new Glide('.cover', {
+    type: 'carousel',
+    autoplay: 6000,
+    focusAt: '1',
+    startAt: 1,
+    perView: 1,
+    gap: 0
+});
 
 document.addEventListener('DOMContentLoaded', () => {
+    glide.mount();
+
     const orderBtn = document.querySelector('.order-button input');
     const closeBtn = document.querySelector('#closeBtn');
     const modal = document.querySelector('#modal');
     const topNavigation = document.querySelector('#modal');
     const subnavigation = document.querySelector('.sub-navigation');
-    const sticky = subnavigation.offsetTop;
+    // const sticky = subnavigation.offsetTop;
     const bgAnimationDiv = document.querySelector('.falling-wings');
 
     const displayModal = () => {
@@ -21,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const stickyHeader = () => {
-        if (window.pageYOffset > sticky) {
-            subnavigation.classList.add('sticky');
-        } else {
-            subnavigation.classList.remove('sticky');
-        }
-    }
+    // const stickyHeader = () => {
+    //     if (window.pageYOffset > sticky) {
+    //         subnavigation.classList.add('sticky');
+    //     } else {
+    //         subnavigation.classList.remove('sticky');
+    //     }
+    // }
 
     const insertWings = numberOfWings => {
         for (let i = 0; i < numberOfWings; i++) {
@@ -44,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    window.addEventListener('scroll', stickyHeader);
+    // window.addEventListener('scroll', stickyHeader);
 
     insertWings(27);
 });
