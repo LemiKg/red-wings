@@ -1,7 +1,8 @@
 import './assets/scss/style.scss';
+import 'material-icons/iconfont/material-icons.css';
 import Glide from '@glidejs/glide';
 
-const glide = new Glide('.cover', {
+const cover = new Glide('.cover', {
     type: 'carousel',
     autoplay: 6000,
     focusAt: '1',
@@ -10,8 +11,16 @@ const glide = new Glide('.cover', {
     gap: 0
 });
 
+const stations = new Glide('.stations', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 2,
+    gap: 50
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-    glide.mount();
+    cover.mount();
+    stations.mount();
 
     const orderBtn = document.querySelector('.order-button input');
     const closeBtn = document.querySelector('#closeBtn');
