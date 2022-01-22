@@ -1,0 +1,46 @@
+.stations {
+
+    .container {
+        position: relative;
+    }
+
+    li {
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .controls {
+        
+        button {
+            position: absolute;
+            top: 48%;
+        }
+
+        .left {
+            left: -60px;
+        }
+
+        .right {
+            right: -60px;
+        }
+    }
+
+    .bulets {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+
+        button {
+            border: 0;
+            width: 30px;
+            height: 30px;
+            background: lighten($dark-color, 70%);
+
+            &.glide__bullet--active {
+                background: $dark-color;
+            }
+        }
+    }
+}
