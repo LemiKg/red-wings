@@ -1,13 +1,19 @@
 @import url('http://fonts.cdnfonts.com/css/rockwell-nova');
+@import url('http://fonts.cdnfonts.com/css/roboto');
+
+$primary-font-stack: 'Rockwell Nova', sans-serif;
+$secondary-font-stack: 'Roboto', sans-serif;
 
 $primary-color: #EB2026;
 $secondary-color: #FBAF42;
 $dark-color: #000;
 $light-color: #fff;
-$ribbonColor: $light-color;
+$ribbon-color: $primary-color;
+$ribbon-text-color: $light-color;
+$ribbon-font: $secondary-font-stack;
+$navigation-font: $primary-font-stack;
+
 
 // $header-background: linear-gradient(45deg, $secondary-color 0%,  $primary-color 100%);
 $header-background: $primary-color;
 $subheader-background: rgba(250,175,66, .5);
-
-$font-stack: 'Rockwell Nova', sans-serif;

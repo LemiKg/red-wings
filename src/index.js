@@ -1,5 +1,4 @@
 import './assets/scss/style.scss';
-import 'material-icons/iconfont/material-icons.css';
 import Glide from '@glidejs/glide';
 
 const cover = new Glide('.cover', {
@@ -15,7 +14,8 @@ const stations = new Glide('.stations', {
     type: 'carousel',
     startAt: 0,
     perView: 2,
-    gap: 50
+    gap: 50,
+    peek: 20
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -57,6 +57,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // window.addEventListener('scroll', stickyHeader);
-
-    insertWings(27);
 });

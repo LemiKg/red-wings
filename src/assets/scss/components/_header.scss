@@ -28,14 +28,15 @@
         display: flex;
         align-items: center;
         font-size: 1.3em;
-        font-family: $font-stack;
+        font-family: $navigation-font;
         
         .nav-item {
             color: $dark-color;
-            padding: 40px;
+            padding: 60px 40px;
         }
 
         .order-button {
+            padding: 0;
 
             input {
                 font-size: .8em;
@@ -45,7 +46,7 @@
                 padding: 15px 40px;
                 text-transform: uppercase;
                 color: $light-color;
-                font-family: $font-stack;
+                font-family: $navigation-font;
             }
         }
     }
