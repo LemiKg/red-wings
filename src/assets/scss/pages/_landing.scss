@@ -2,6 +2,9 @@
     
     .cover {
         background-image: url(../images/cover.png) no-repeat center center;
-        height: 600px;
+        
+        @media only screen and ($desktop) {
+            height: 600px;
+        }
     }
 }

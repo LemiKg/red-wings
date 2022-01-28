@@ -1,0 +1,22 @@
+.social-networks {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background: $primary-color;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    i {
+        padding: 20px;
+        font-size: 2em;
+        color: $light-color;
+    }
+
+    .facebook {
+        border-top: 1px solid $light-color;
+    }
+
+    .instagram {
+        border-bottom: 1px solid $light-color;
+    }
+}

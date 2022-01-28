@@ -26,7 +26,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.5.2",
-    "material-icons": "^1.10.6"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@glidejs/glide": "^3.5.2"
   }
 }

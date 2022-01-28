@@ -19,11 +19,24 @@
         }
 
         .left {
-            left: -60px;
+            left: 40px;
         }
 
         .right {
-            right: -60px;
+            right: 40px;
+        }
+    }
+
+    @media only screen and($desktopXXXL) {
+        .controls {
+    
+            .left {
+                left: -60px;
+            }
+    
+            .right {
+                right: -60px;
+            }
         }
     }
 
@@ -42,5 +55,6 @@
                 background: $dark-color;
             }
         }
+
     }
 }
