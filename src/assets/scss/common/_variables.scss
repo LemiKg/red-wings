@@ -17,3 +17,13 @@ $navigation-font: $primary-font-stack;
 // $header-background: linear-gradient(45deg, $secondary-color 0%,  $primary-color 100%);
 $header-background: $primary-color;
 $subheader-background: rgba(250,175,66, .5);
+
+$mobileL: 'min-width:360px';
+$mobileXL: 'min-width:480px';
+$mobileXXL: 'min-width:640px';
+$tablet: 'min-width:768px';
+$desktop: 'min-width:1024px';
+$desktopXL: 'min-width:1102px';
+$desktopXXL: 'min-width:1200px';
+$desktopXXXL: 'min-width:1400px';
+$desktopXXXXL: 'min-width:1600px';

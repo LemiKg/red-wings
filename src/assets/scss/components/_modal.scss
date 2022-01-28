@@ -11,6 +11,7 @@
     max-height: 0;
     justify-content: space-between;
     transition: .5s;
+    z-index: 10;
 
     #closeBtn {
         position: absolute;

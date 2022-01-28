@@ -1,10 +1,16 @@
 .header {
+    background: url(../images/Header.webp) no-repeat center center;
+    background-size: cover;
     
     .container {
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+
+        @media only screen and ($desktop) {
+            justify-content: space-between;
+        }
     }
 
     .logo {
@@ -14,46 +20,112 @@
         }
         
         .ribbon {
-            width: 250px;
+            width: 20%;
             background-color: transparent;
             position: absolute;
-            left: -100px;
+            left: 50px;
             top: -350px;
-            animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: ribbonDrop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            
+            @media only screen and ($desktopXXL) {
+                left: -50px;
+            }
+
+            @media only screen and ($desktopXXXXL) {
+                left: -100px;
+            }
+        }
+    }
+
+    .order-button {
+        padding: 0;
+
+        input {
+            font-size: .8em;
+            background-color: $secondary-color;
+            border: 0;
+            border-radius: 10px;
+            padding: 15px 40px;
+            text-transform: uppercase;
+            color: $light-color;
+            font-family: $navigation-font;
         }
     }
 
     .navigation {
         text-transform: uppercase;
-        display: flex;
+        display: none;
         align-items: center;
-        font-size: 1.3em;
         font-family: $navigation-font;
         
         .nav-item {
             color: $dark-color;
-            padding: 60px 40px;
+            padding: 20px 10px;
+            font-size: 1em;
+
+            @media only screen and ($desktopXXL) {
+                padding: 60px 40px;
+                font-size: 1.3em;
+            }
         }
 
-        .order-button {
-            padding: 0;
-
-            input {
-                font-size: .8em;
-                background-color: $secondary-color;
-                border: 0;
-                border-radius: 10px;
-                padding: 15px 40px;
-                text-transform: uppercase;
-                color: $light-color;
-                font-family: $navigation-font;
-            }
+        @media only screen and ($desktop) {
+            display: flex;
         }
     }
 
-    @keyframes drop {
+    /* Responsive Navigation */
+
+    .responsive-navigation {
+        display: flex;
+
+        .hamburger {
+            position: absolute;
+            right: 0px;
+            font-size: 2em;
+            top: 10%;
+            padding: 20px;
+        }
+
+        .order-button {
+            margin: 20px 0;
+        }
+
+        @media only screen and ($desktop) {
+            display: none;
+        }
+    }
+
+    .mobile-nav {
+        display: none;
+
+        &.active {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 20%;
+            left: 0;
+            background-color: $light-color;
+            z-index: 4;
+        }
+    }
+
+    /* Logo Animation */
+
+    @keyframes ribbonDrop {
         0% {
             top: -350px;
+        }
+        100% {
+            top: 0;
+        }
+    }
+
+    @keyframes headerDrop {
+        0% {
+            top: -200px;
         }
         100% {
             top: 0;

@@ -15,18 +15,31 @@ const stations = new Glide('.stations', {
     startAt: 0,
     perView: 2,
     gap: 50,
-    peek: 20
+    peek: 20,
+    breakpoints: {
+        800: {
+            perView: 1
+        }
+    }
 });
+
+const displayResponsiveNav = () => {
+    const menu = document.querySelector('.mobile-nav');
+    menu.classList.add('active');
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     cover.mount();
     stations.mount();
-
-    const orderBtn = document.querySelector('.order-button input');
+    
+    const hamburger = document.querySelector('.hamburger');
+    const orderBtns = document.querySelectorAll('.order-button input');
     const closeBtn = document.querySelector('#closeBtn');
     const modal = document.querySelector('#modal');
     const topNavigation = document.querySelector('#modal');
     // const sticky = subnavigation.offsetTop;
+
+    hamburger.addEventListener('click', displayResponsiveNav);
 
     const displayModal = () => {
         if (!modal.classList.contains('active')) {
@@ -48,7 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // }
 
-    orderBtn.addEventListener('click', displayModal);
+    orderBtns.forEach(btn => {
+        btn.addEventListener('click', displayModal);
+    })
+
     closeBtn.addEventListener('click', hideModal);
     document.addEventListener('click', e => {
         if (!orderBtn.contains(e.target) && !modal.contains(e.target)) {
