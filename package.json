@@ -26,6 +26,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.5.2"
+    "@glidejs/glide": "^3.5.2",
+    "material-icons": "^1.10.6"
   }
 }
