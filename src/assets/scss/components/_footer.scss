@@ -1,13 +1,28 @@
 .footer {
     background-color: $primary-color;
+    
 
     .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 50px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 50px;
         font-family: $primary-font-stack;
+
+        @media only screen and ($mobileXXL) {
+            display: grid;
+            grid-template-areas: 
+            "a a b b"
+            "c c d d"
+            "  e e  ";
+            gap: 50px;
+        }
+
+        @media only screen and ($desktopXL) {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
 
         .col {
             display: flex;
@@ -18,17 +33,27 @@
             font-weight: 100;
 
             .heading {
-                height: 70px;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
+                @media only screen and ($desktopXL) {
+                    
+                    padding-bottom: 20px;
+                }
+
+                @media only screen and ($mobileXXL) {
+                    height: 70px;
+                    padding-bottom: 20px;
+                }
 
                 h1 {
                     text-transform: uppercase;
-                    font-weight: 100;;
+                    font-weight: 100;
+                    font-size: 1.7rem;
                 }
 
                 h2 {
                     text-transform: uppercase;
                     font-weight: 100;
+                    font-size: 1.3rem;
                 }
             }
 
@@ -42,7 +67,35 @@
                 font-size: 20px;
                 font-family: $primary-font-stack;
             }
+            
+        }
+        .social {
+
+            @media only screen and ($desktopXL) {
+                a{
+                    display: flex;
+                    font-size: 30px;
+                    
+                    .icon {
+                        width: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .text {
+                        
+                    }
+                }
+            }
+
+            @media only screen and ($mobileXXL) {
+                
+            }
+            
+
+
         }
     }
+    
 }
 
