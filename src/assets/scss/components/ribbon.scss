@@ -3,13 +3,22 @@
 
     #ribbon-container {
         position: absolute;
-        top: 35px;
+        top: 20px;
         right: -15px;
         overflow: visible;
+        @media only screen and ($mobileXXL) {
+            top: 35px;
+        }
         /* so we can see the pseudo-elements we're going to add to the anchor */
         
-        font-size: 2.2em;
-        font-weight: 600;
+        font-size: 1rem;
+        @media only screen and ($mobileL) {
+            font-size: 1.5rem;   
+        }
+        @media only screen and ($mobileXXL) {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
         /* font-size and line-height must be equal so we can account for the height of the banner */
         
         line-height: 18px;
@@ -43,8 +52,14 @@
 
         p {
             display: block;
-            padding: 31px;
+            padding: 5px;
             position: relative;
+            @media only screen and ($mobileL) {
+                padding: 16px;   
+            }
+            @media only screen and ($mobileXXL) {
+                padding: 31px;   
+            }
             /* allows us to position our pseudo-elements properly */
             
             background: $ribbon-color;
@@ -78,11 +93,27 @@
                 display: block;
                 position: absolute;
                 top: 0;
-                left: -40px;
-                border-top: 40px solid $ribbon-color;
-                border-bottom: 40px solid $ribbon-color;
-                border-right: 40px solid transparent;
-                border-left: 40px solid transparent;
+                left: -14px;
+                border-top: 14px solid $ribbon-color;
+                border-bottom: 14px solid $ribbon-color;
+                border-right: 14px solid transparent;
+                border-left: 14px solid transparent;
+
+                @media only screen and ($mobileL) {
+                    left: -25px;
+                    border-top: 25px solid $ribbon-color;
+                    border-bottom: 25px solid $ribbon-color;
+                    border-right: 25px solid transparent;
+                    border-left: 25px solid transparent; 
+                }
+
+                @media only screen and ($mobileXXL) {
+                    left: -40px;
+                    border-top: 40px solid $ribbon-color;
+                    border-bottom: 40px solid $ribbon-color;
+                    border-right: 40px solid transparent;
+                    border-left: 40px solid transparent;  
+                }
 
             }
         }

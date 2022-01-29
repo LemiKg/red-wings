@@ -1,9 +1,10 @@
 .stations {
-
+    
     .container {
         position: relative;
+        width: 80%;
+        margin: auto;
     }
-
     li {
 
         img {
@@ -12,32 +13,39 @@
     }
 
     .controls {
+        font-size: 2.5rem;
+        font-weight: 100;
+
+        @media only screen and ($mobileXXL) {
+            font-size: 5.5rem;  
+            font-weight: 100; 
+        }
         
         span {
             position: absolute;
-            top: 43%;
+            top: 35%;
+
+            @media only screen and ($mobileXXL) {
+                top: 43%; 
+            }
         }
 
         .left {
-            left: 40px;
+            left: -20px;
             color: gray;
+
+            @media only screen and ($mobileXXL) {
+                left: -60px; 
+            }
         }
+        
 
         .right {
-            right: 40px;
+            right: -20px;
             color: gray;
-        }
-    }
 
-    @media only screen and($desktopXXXL) {
-        .controls {
-    
-            .left {
-                left: -60px;
-            }
-    
-            .right {
-                right: -60px;
+            @media only screen and ($mobileXXL) {
+                right: -60px; 
             }
         }
     }

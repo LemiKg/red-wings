@@ -6,6 +6,7 @@
 body,
 html {
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 .container {
@@ -20,7 +21,28 @@ a {
 
 .section-title {
     text-align: center;
-    margin: 100px 0 50px 0;
+    margin: 5% 0;
     font-family: $primary-font-stack;
-    font-size: 2em;
+    font-size: 2rem;
+}
+
+.section-heading {
+    background: url(../images/fastfoodstanicebcg.png) no-repeat center center;
+    color: $light-color;
+    background-size: contain;
+
+    h1{
+        font-size: 1.2rem;
+        padding: 2px 5px;
+                        
+        @media only screen and ($tablet) {        
+            font-size: 2.5rem;
+            padding: 10px 15px;  
+        }
+
+        @media only screen and ($mobileXXL) {
+            font-size: 2rem;
+            padding: 10px 15px;  
+        }
+    }  
 }
