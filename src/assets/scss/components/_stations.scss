@@ -13,17 +13,19 @@
 
     .controls {
         
-        button {
+        span {
             position: absolute;
-            top: 48%;
+            top: 43%;
         }
 
         .left {
             left: 40px;
+            color: gray;
         }
 
         .right {
             right: 40px;
+            color: gray;
         }
     }
 

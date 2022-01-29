@@ -27,6 +27,7 @@
             top: -350px;
             animation: ribbonDrop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
             
+            
             @media only screen and ($desktopXXL) {
                 left: -50px;
             }
