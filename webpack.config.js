@@ -15,6 +15,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'index.html')
         }),
+        new HtmlWebpackPlugin({
+          template: './src/kragujevac.html',
+          chunks: ['kragujevac'],
+          filename: 'kragujevac.html',
+        }),
         new CopyPlugin({
             patterns: [
                 { from: 'src/assets/images', to: 'assets/images' }

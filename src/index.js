@@ -33,10 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     stations.mount();
     
     const hamburger = document.querySelector('.hamburger');
-    const orderBtns = document.querySelectorAll('.order-button input');
+    const orderBtns = document.querySelectorAll('.orderBtn');
     const closeBtn = document.querySelector('#closeBtn');
     const modal = document.querySelector('#modal');
     const topNavigation = document.querySelector('#modal');
+    const responsiveOrderBtn = document.querySelector('#responsiveOrderBtn');
+    const orderBtn = document.querySelector('#orderBtn');
+    const mobOrderBtn = document.querySelector('#mobOrderBtn');
     // const sticky = subnavigation.offsetTop;
 
     hamburger.addEventListener('click', displayResponsiveNav);
@@ -44,12 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayModal = () => {
         if (!modal.classList.contains('active')) {
             modal.classList.add('active');
+            document.documentElement.classList.add('modal-opened');
         }
     }
 
     const hideModal = () => {
         if (modal.classList.contains('active')) {
             modal.classList.remove('active');
+            document.documentElement.classList.remove('modal-opened');
         }
     }
 
@@ -66,10 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     closeBtn.addEventListener('click', hideModal);
+
     document.addEventListener('click', e => {
-        if (!orderBtn.contains(e.target) && !modal.contains(e.target)) {
+        if (!orderBtn.contains(e.target) && 
+            !modal.contains(e.target) &&
+            !responsiveOrderBtn.contains(e.target) && 
+            !mobOrderBtn.contains(e.target)) {
             hideModal();
-        }
+        } 
     });
 
     // window.addEventListener('scroll', stickyHeader);
