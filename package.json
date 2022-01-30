@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@glidejs/glide": "^3.5.2"
+    "@glidejs/glide": "^3.5.2",
+    "@googlemaps/js-api-loader": "^1.13.2"
   }
 }

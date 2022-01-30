@@ -44,5 +44,10 @@ a {
             font-size: 2rem;
             padding: 10px 15px;  
         }
+        @media only screen and ($mobileXXL) {
+            font-size: 3rem;
+            padding: 15px 20px;  
+        }
+
     }  
 }

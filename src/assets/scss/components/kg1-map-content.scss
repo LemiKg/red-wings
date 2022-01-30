@@ -1,0 +1,58 @@
+.kragujevac1-mapa {
+    width: 100%;
+
+    .section-heading {
+        background-image: url(../images/kragujevacs1.png);
+        margin-top: 200px;
+        margin-bottom: 50px;
+    }
+
+    .kg1-map {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        @media only screen and ($desktopXL) {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .mapa {
+            @media only screen and ($desktopXL) {
+                flex: 4;
+            }
+            
+        }
+
+        #map {
+            height: 516px;
+            max-width: 960px;
+            border-radius: 10px;
+        }
+
+        .description {
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $secondary-color;
+            padding: 50px 20px;
+            border-radius: 10px;
+
+            @media only screen and ($desktopXL) {
+                flex: 1;
+                margin: 0 0 0 20px;
+                width: 100%;
+            }
+            p,
+            a {
+                font-family: $primary-font-stack;
+                color: $light-color;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

@@ -17,7 +17,6 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
           template: './src/kragujevac.html',
-          chunks: ['kragujevac'],
           filename: 'kragujevac.html',
         }),
         new CopyPlugin({
