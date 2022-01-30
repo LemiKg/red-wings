@@ -6,23 +6,16 @@
         flex-wrap: wrap;
         grid-gap: 20px;
 
-        // grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-        // grid-gap: 40px;
-
         @media only screen and ($desktopXXXL) {
             grid-template-columns: repeat(3, 1fr);
         }
-
-        // @media only screen and ($desktopXXL) {
-        //     grid-gap: 20px;
-        //     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-        // }
 
         .content-box {
             min-width: 300px;
             flex: 1;
             display: grid;
             grid-template-rows: repeat(3, 200px);
+            border-radius: 15px;
 
             &.first {
                 background: url(../images/rolnice.png) no-repeat center center;
@@ -51,10 +44,6 @@
                 border-top-right-radius: 30px;
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
-                
-                // @media only screen and ($desktopXXXL) {
-                //     transform: translateY(-20%);
-                // }
 
                 span {
                     font-size: 1.5rem;
@@ -66,96 +55,8 @@
                     padding: 0 20px 20px 20px;
                     color: $light-color;
                 }
-
-                // @media only screen and ($mobileM) {
-                //     // height: 37%;
-                //     span {
-                        
-                //     }
-    
-                //     p {
-                //         font-size: 1.2rem;
-                //     }
-                // }
-
-                // @media only screen and ($mobileX) {
-                //     height: 30%;
-                //     span {
-                        
-                //     }
-    
-                //     p {
-                //         font-size: 1.2rem;
-                //     }
-                // }
-
-                // @media only screen and ($mobileXL) {
-                //     height: 25%;
-
-                //     span {
-                //         font-size: 1.8rem;
-                //     }
-    
-                //     p {
-                //         // font-size: 1.5rem;
-                //     }
-                // }
-
-                // @media only screen and ($mobileXXL) {
-                //     height: 20%;
-
-                //     span {
-                //         font-size: 2rem;
-                //     }
-    
-                //     p {   
-                //         font-size: 1.5rem;
-                //     }
-                    
-                // }
-
-                // @media only screen and ($tablet) {
-                //     height: 25%;
-
-                //     span {
-                //         font-size: 2.7rem;
-                //     }
-    
-                //     p {   
-                //         font-size: 1.8rem;
-                //     }
-                    
-                // }
-
-                // @media only screen and ($desktop) {
-                //     height: 30%;
-
-                //     span {
-                //         font-size: 2rem;
-                //     }
-    
-                //     p {   
-                //         font-size: 1.5rem;
-                //     }
-                    
-                // }
-
-                // @media only screen and ($desktopXL) {
-                //     // height: 30%;
-
-                //     span {
-                //         font-size: 1.5rem;
-                //     }
-    
-                //     p {   
-                //         font-size: 1.2rem;
-                //     }
-                    
-                // }
-
-
-                
             }
+
             .gruja-txt {
                 background-color: $secondary-color;
             }
