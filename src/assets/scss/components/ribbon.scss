@@ -23,33 +23,6 @@
         
         line-height: 18px;
 
-        &::before {
-            content: "";
-            height: 0;
-            width: 0;
-            display: block;
-            position: absolute;
-            top: 3px;
-            left: 0;
-            border-top: 40px solid rgba(0, 0, 0, .3);
-            /* These 4 border properties create the first part of our drop-shadow */
-            
-            border-bottom: 40px solid rgba(0, 0, 0, .3);
-            border-right: 40px solid rgba(0, 0, 0, .3);
-            border-left: 40px solid transparent;
-        }
-
-        &::after {
-            content: "";
-            height: 3px;
-            background: rgba(0, 0, 0, .3);
-            display: block;
-            position: absolute;
-            bottom: -3px;
-            left: 58px;
-            right: 3px;
-        }
-
         p {
             display: block;
             padding: 5px;

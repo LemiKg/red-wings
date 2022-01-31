@@ -12,7 +12,12 @@
             height: 100%;
             
             li {
+                height: auto;
                 object-fit: cover;
+
+                img {
+                    height: 100%;
+                }
             }
         }
     }

@@ -28,7 +28,6 @@ html {
     opacity: 0;
     max-height: 0;
     padding: 0;
-    transition: .5s;
     z-index: 10;
 
     .modal-header {
@@ -74,6 +73,7 @@ html {
         opacity: 1;
         max-height: 80%;
         padding: 30px;
+        transition: .5s;
 
         .city-station {
             display: grid;

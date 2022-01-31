@@ -6,6 +6,7 @@
         margin: auto;
     }
     li {
+        height: auto;
 
         img {
             width: 100%;
@@ -32,7 +33,7 @@
 
         .left {
             left: -20px;
-            color: gray;
+            color: lighten($dark-color, 50%);
 
             @media only screen and ($mobileXXL) {
                 left: -60px; 
@@ -42,11 +43,32 @@
 
         .right {
             right: -20px;
-            color: gray;
+            color: lighten($dark-color, 50%);
 
             @media only screen and ($mobileXXL) {
                 right: -60px; 
             }
+        }
+    }
+
+    .stations-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        @media only screen and ($desktop) {
+            font-size: 2.5rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        input {
+            padding: 5% 10%;
+            font-family: $secondary-font-stack;
         }
     }
 

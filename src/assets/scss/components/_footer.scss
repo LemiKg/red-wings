@@ -1,28 +1,15 @@
 .footer {
     background-color: $primary-color;
-    
+    background-image: url(../images/footer.webp);
+    background-size: cover;
 
     .container {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 50px;
         padding: 50px;
         font-family: $primary-font-stack;
-
-        @media only screen and ($mobileXXL) {
-            display: grid;
-            grid-template-areas: 
-            "a a b b"
-            "c c d d"
-            "  e e  ";
-            gap: 50px;
-        }
-
-        @media only screen and ($desktopXL) {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-        }
 
         .col {
             display: flex;
@@ -82,20 +69,8 @@
                         justify-content: center;
                         align-items: center;
                     }
-                    .text {
-                        
-                    }
                 }
             }
-
-            @media only screen and ($mobileXXL) {
-                
-            }
-            
-
-
         }
     }
-    
 }
-

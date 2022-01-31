@@ -19,7 +19,7 @@ const stations = new Glide('.stations', {
     gap: 50,
     peek: 20,
     breakpoints: {
-        800: {
+        1024: {
             perView: 1
         }
     }
@@ -32,6 +32,7 @@ const displayResponsiveNav = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     cover.mount();
+    cover.destroy();
     stations.mount();
     
     const hamburger = document.querySelector('.hamburger');
@@ -68,20 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // }
 
-    orderBtns.forEach(btn => {
-        btn.addEventListener('click', displayModal);
-    })
+    // orderBtns.forEach(btn => {
+    //     btn.addEventListener('click', displayModal);
+    // })
 
-    closeBtn.addEventListener('click', hideModal);
+    // closeBtn.addEventListener('click', hideModal);
 
-    document.addEventListener('click', e => {
-        if (!orderBtn.contains(e.target) && 
-            !modal.contains(e.target) &&
-            !responsiveOrderBtn.contains(e.target) && 
-            !mobOrderBtn.contains(e.target)) {
-            hideModal();
-        } 
-    });
+    // document.addEventListener('click', e => {
+    //     if (!orderBtn.contains(e.target) && 
+    //         !modal.contains(e.target) &&
+    //         !responsiveOrderBtn.contains(e.target) && 
+    //         !mobOrderBtn.contains(e.target)) {
+    //         hideModal();
+    //     } 
+    // });
 
     // window.addEventListener('scroll', stickyHeader);
 });

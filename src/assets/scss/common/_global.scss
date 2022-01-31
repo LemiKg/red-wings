@@ -9,6 +9,10 @@ html {
     font-size: 16px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -27,7 +31,7 @@ a {
 }
 
 .section-heading {
-    background: url(../images/fastfoodstanicebcg.png) no-repeat center center;
+    background: url(../images/fastfoodstanicebcg.webp) no-repeat center center;
     color: $light-color;
     background-size: contain;
 
@@ -36,7 +40,7 @@ a {
         padding: 2px 5px;
                         
         @media only screen and ($tablet) {        
-            font-size: 2.5rem;
+            font-size: 3rem;
             padding: 10px 15px;  
         }
 
@@ -50,4 +54,20 @@ a {
         }
 
     }  
+}
+
+
+.main-button {
+    padding: 0;
+
+    input {
+        font-size: .8em;
+        background-color: $secondary-color;
+        border: 0;
+        border-radius: 10px;
+        padding: 15px 40px;
+        text-transform: uppercase;
+        color: $light-color;
+        font-family: $navigation-font;
+    }
 }

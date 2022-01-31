@@ -13,21 +13,27 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <div class="ribbon">
-                    <img src="assets/images/banner.png" alt="logo">
-                </div>
+                <a href="index.html">
+                    <div class="ribbon">
+                        <img src="assets/images/banner.webp" alt="logo">
+                    </div>
+                </a>
             </div>
             <nav class="navigation">
-                <a class="nav-item" href="#about">TVOJ RED WINGS</a>
-                <a class="nav-item" href="#menu">KARIJERA</a>
-                <a class="nav-item" href="#contact">FAST FOOD STANICE</a>
-                <div class="order-button nav-item">
-                    <input class="orderBtn" id="orderBtn" type="button" value="Poruči Online">
+                <a class="nav-item" href="#trw">TVOJ RED WINGS</a>
+                <!-- <a class="nav-item" href="#menu">KARIJERA</a> -->
+                <a class="nav-item" href="#stations">FAST FOOD STANICE</a>
+                <div class="order-button main-button nav-item">
+                    <a href="https://fabrikahrane.bitebell.com/public/rw">
+                        <input class="orderBtn" id="orderBtn" type="button" value="Poruči Online">
+                    </a>
                 </div>
             </nav>
             <nav class="responsive-navigation">
-                <div class="order-button nav-item">
-                    <input class="orderBtn" id="responsiveOrderBtn" type="button" value="Poruči Online">
+                <div class="order-button main-button nav-item">
+                    <a href="https://fabrikahrane.bitebell.com/public/rw">
+                        <input class="orderBtn" id="responsiveOrderBtn" type="button" value="Poruči Online">
+                    </a>
                 </div>
 
                 <div class="hamburger">
@@ -39,8 +45,11 @@
             <a class="nav-item" href="#about">TVOJ RED WINGS</a>
             <a class="nav-item" href="#menu">KARIJERA</a>
             <a class="nav-item" href="#contact">FAST FOOD STANICE</a>
-            <div class="order-button nav-item">
-                <input class="orderBtn" id="mobOrderBtn" type="button" value="Poruči Online">
+            
+            <div class="order-button main-button nav-item">
+                <a href="https://fabrikahrane.bitebell.com/public/rw">
+                    <input class="orderBtn" id="mobOrderBtn" type="button" value="Poruči Online">
+                </a>
             </div>
         </div>
     </header>
@@ -50,19 +59,19 @@
         <div data-glide-el="track" class="glide__track">
             <ul class="glide__slides">
                 <li class="glide__slide">
-                    <img src="assets/images/cover.png" alt="cover image kofica">
+                    <img src="assets/images/cover1.webp" alt="cover image">
                 </li>
                 <li class="glide__slide">
-                    <img src="assets/images/kragujevac.png" alt="cover image kofica">
+                    <img src="assets/images/cover.webp" alt="cover image kofica">
                 </li>
-                <li class="glide__slide">
-                    <img src="assets/images/beograd.png" alt="cover image kofica">
-                </li>
+                <!-- <li class="glide__slide">
+                    <img src="assets/images/beograd.webp" alt="cover image kofica">
+                </li> -->
             </ul>
         </div>
     </section>
 
-    <section class="stations">
+    <section id="stations" class="stations">
         <div class="container"> 
             <div class="section-heading">
                 <h1 class="section-title">
@@ -76,7 +85,25 @@
                             <div id="ribbon-container">
                                 <p id="ribbon">KRAGUJEVAC</p>
                              </div>
-                            <img src="assets/images/beograd.png" alt="station image">
+                            <img src="assets/images/beograd.webp" alt="station image">
+                            <div class="main-button stations-btn">
+                                <a href="kragujevac.html">
+                                    <input type="button" value="Pogledaj">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div class="station ribbon-wrapper">
+                            <div id="ribbon-container">
+                                <p id="ribbon">KRAGUJEVAC 1</p>
+                             </div>
+                            <img src="assets/images/kragujevac.webp" alt="station image">
+                            <div class="main-button stations-btn">
+                                <a href="kragujevac.html">
+                                    <input type="button" value="Pogledaj">
+                                </a>
+                            </div>
                         </div>
                     </li>
                     <li class="glide__slide">
@@ -84,15 +111,12 @@
                             <div id="ribbon-container">
                                 <p id="ribbon">BEOGRAD</p>
                              </div>
-                            <img src="assets/images/kragujevac.png" alt="station image">
-                        </div>
-                    </li>
-                    <li class="glide__slide">
-                        <div class="station ribbon-wrapper">
-                            <div id="ribbon-container">
-                                <p id="ribbon">PARAĆIN</p>
-                             </div>
-                            <img src="assets/images/beograd.png" alt="station image">
+                            <img src="assets/images/beograd.webp" alt="station image">
+                            <div class="main-button stations-btn">
+                                <a href="kragujevac.html">
+                                    <input type="button" value="Pogledaj">
+                                </a>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -185,7 +209,7 @@
     <!-- NOVA KLOPA SECTION /> -->
 
     <!-- TVOJ RED WINSG SECTION < -->
-        <section class="trw">
+        <section id="trw" class="trw">
             <div class="container">
                 <div class="section-heading">
                     <h1 class="section-title">
@@ -216,7 +240,7 @@
                         <div id="ribbon-container">
                             <p id="ribbon">BEOGRAD</p>
                         </div>
-                        <img src="assets/images/beograd.png" alt="stanica Beograd">
+                        <img src="assets/images/beograd.webp" alt="stanica Beograd">
                     </div>
                 </a>
             </section>
@@ -227,7 +251,7 @@
                         <div id="ribbon-container">
                             <p id="ribbon">KRAGUJEVAC</p>
                         </div>
-                        <img src="assets/images/kragujevac.png" alt="stanica Kragujevac">
+                        <img src="assets/images/kragujevac.webp" alt="stanica Kragujevac">
                     </div>
                 </a>
             </section>
@@ -238,7 +262,7 @@
                         <div id="ribbon-container">
                             <p id="ribbon">PARAĆIN</p>
                         </div>
-                        <img src="assets/images/beograd.png" alt="stanica PARAĆIN">
+                        <img src="assets/images/beograd.webp" alt="stanica PARAĆIN">
                     </div>
                 </a>
             </section>
