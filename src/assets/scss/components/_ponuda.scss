@@ -50,11 +50,13 @@
                     font-size: 1.5rem;
                     font-weight: 700;
                     padding: 20px;
+                    padding-top: 0;
                     color: $dark-color;
+
                 }
 
                 p {
-                    padding: 0 20px 20px 20px;
+                    padding: 0 20px 0 20px;
                     color: $light-color;
                 }
             }

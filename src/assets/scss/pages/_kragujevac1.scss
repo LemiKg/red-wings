@@ -1,0 +1,146 @@
+.card {
+    width: fit-content;
+    margin: 20px auto;
+
+    .ribbon-wrapper {
+    position: relative;
+
+    #ribbon-container {
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    overflow: visible;
+
+    @media only screen and ($mobileXXL) {
+        top: 35px;
+    }
+
+    /* so we can see the pseudo-elements we're going to add to the anchor */
+            
+    font-size: 1rem;
+
+    @media only screen and ($mobileL) {
+        font-size: 1.5rem;   
+    }
+            
+    @media only screen and ($mobileXXL) {
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+    
+    /* font-size and line-height must be equal so we can account for the height of the banner */
+            
+        line-height: 18px;
+
+         p {
+            display: block;
+            padding: 5px;
+            position: relative;
+
+            @media only screen and ($mobileL) {
+                padding: 16px;   
+            }
+            
+            @media only screen and ($mobileXXL) {
+                 padding: 31px;   
+            }
+            /* allows us to position our pseudo-elements properly */
+                
+            background: $ribbon-color;
+            overflow: visible;
+            margin-left: 29px;
+            color: $ribbon-text-color;
+            font-family: $ribbon-font;
+            text-decoration: none;
+            
+            &::after {
+            /* this creates the "folded" part of our ribbon */
+                    
+            content: "";
+            height: 0;
+            width: 0;
+            display: block;
+            position: absolute;
+            top: -15px;
+            right: 0;
+            border-bottom: 15px solid $secondary-color;
+            border-right: 15px solid transparent;
+
+            }
+
+            &::before {
+            /* this creates the "forked" part of our ribbon */
+                    
+            content: "";
+            height: 0;
+            width: 0;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -14px;
+            border-top: 14px solid $ribbon-color;
+            border-bottom: 14px solid $ribbon-color;
+            border-right: 14px solid transparent;
+            border-left: 14px solid transparent;
+
+            @media only screen and ($mobileL) {
+                left: -25px;
+                border-top: 25px solid $ribbon-color;
+                border-bottom: 25px solid $ribbon-color;
+                border-right: 25px solid transparent;
+                border-left: 25px solid transparent; 
+            }
+
+            @media only screen and ($mobileXXL) {
+                left: -40px;
+                border-top: 40px solid $ribbon-color;
+                border-bottom: 40px solid $ribbon-color;
+                border-right: 40px solid transparent;
+                border-left: 40px solid transparent;  
+            }
+                    
+                .main-button {
+                    padding: 0;
+                        
+                    input {
+                        font-size: .8em;
+                        background-color: $secondary-color;
+                        border: 0;
+                        border-radius: 10px;
+                        padding: 15px 40px;
+                        text-transform: uppercase;
+                        color: $light-color;
+                        font-family: $navigation-font;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.stations-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    @media only screen and ($mobileL) {
+        font-size: 1.5rem;
+        right: 25px;
+    }
+
+    @media only screen and ($mobileXXL) {
+        font-size: 2.5rem;
+        right: 40px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    input {
+        padding: 5% 10%;
+        font-family: $secondary-font-stack;
+    }
+}

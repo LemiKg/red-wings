@@ -2,8 +2,13 @@
     
     .container {
         position: relative;
-        width: 80%;
+        width: 100%;
         margin: auto;
+
+        @media only screen and ($desktopXXXL) {
+            width: 80%;
+            margin: auto;
+        }
     }
     li {
         height: auto;
@@ -17,6 +22,11 @@
         font-size: 2.5rem;
         font-weight: 100;
 
+        @media only screen and ($mobileX) {
+            font-size: 3.5rem;  
+            font-weight: 100; 
+        }
+
         @media only screen and ($mobileXXL) {
             font-size: 5.5rem;  
             font-weight: 100; 
@@ -26,51 +36,60 @@
             position: absolute;
             top: 35%;
 
-            @media only screen and ($mobileXXL) {
-                top: 43%; 
+            @media only screen and ($mobileM) {
+                top: 37%; 
             }
+
+            @media only screen and ($mobileX) {
+                top: 39%; 
+            }
+
+            @media only screen and ($mobileXL) {
+                top: 40%; 
+            }
+
+            @media only screen and ($mobileXL) {
+                top: 40%; 
+            }
+
+            @media only screen and ($tablet) {
+                top: 45%;
+            }
+
+            @media only screen and ($desktopXXL) {
+                top: 45%;
+            }
+
         }
 
         .left {
-            left: -20px;
-            color: lighten($dark-color, 50%);
+            left: 40px;
+            color: $secondary-color;
 
-            @media only screen and ($mobileXXL) {
-                left: -60px; 
+            @media only screen and ($desktopXXXL) {
+                left: -60px;
+                color: lighten($dark-color, 50%);
             }
         }
         
 
         .right {
-            right: -20px;
-            color: lighten($dark-color, 50%);
+            right: 40px;
+            color: $secondary-color;
 
-            @media only screen and ($mobileXXL) {
-                right: -60px; 
+            @media only screen and ($desktopXXXL) {
+                right: -20px;
+                color: lighten($dark-color, 50%);
+            }
+
+            @media only screen and ($desktopXXXL) {
+                right: -60px;
+                color: lighten($dark-color, 50%);
             }
         }
     }
 
-    .stations-btn {
-        position: absolute;
-        bottom: 20px;
-        right: 15px;
-        font-size: 1.5rem;
-        font-weight: 700;
-
-        @media only screen and ($desktop) {
-            font-size: 2.5rem;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        input {
-            padding: 5% 10%;
-            font-family: $secondary-font-stack;
-        }
-    }
+    
 
     .bulets {
         display: flex;
