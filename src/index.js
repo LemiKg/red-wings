@@ -1,4 +1,6 @@
 import './assets/scss/style.scss';
+import '@glidejs/glide/dist/css/glide.core.min.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import Glide from '@glidejs/glide';
 
 import { Loader } from '@googlemaps/js-api-loader';

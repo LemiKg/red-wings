@@ -31,7 +31,7 @@
         }
 
         .description {
-            width: 50%;
+            width: 90%;
             margin: 20px auto;
             text-align: center;
             display: flex;
@@ -48,6 +48,7 @@
                 margin: 0 0 0 20px;
                 width: 100%;
             }
+
             p,
             a {
                 font-family: $primary-font-stack;
@@ -55,5 +56,32 @@
                 font-size: 1.5rem;
             }
         }
+    }
+}
+
+.stations-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    @media only screen and ($mobileL) {
+        font-size: 1.5rem;
+        right: 25px;
+    }
+
+    @media only screen and ($mobileXXL) {
+        font-size: 2.5rem;
+        right: 40px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    input {
+        padding: 5% 10%;
+        font-family: $secondary-font-stack;
     }
 }
