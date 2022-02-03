@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -11,21 +12,33 @@ module.exports = {
           template: path.resolve(__dirname, 'src', 'index.html')
       }),
       new HtmlWebpackPlugin({
-        template: './src/kragujevac.html',
+        template: path.resolve(__dirname, 'src', 'kragujevac.html'),
         filename: 'kragujevac.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'kragujevac1.html'),
+        filename: 'kragujevac1.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'beograd.html'),
+        filename: 'beograd.html',
       }),
       new CopyPlugin({
           patterns: [
               { from: 'src/assets/images', to: 'assets/images' }
           ],
       }),
+      new MiniCssExtractPlugin({
+          filename: "[name].[contenthash].css",
+          chunkFilename: "[id].[contenthash].css"
+      })
   ],
   module: {
       rules: [
           {
-              test: /\.(scss|css)$/i,
+              test: /\.(sa|sc|c)ss$/,
               use: [
-                  'style-loader',
+                  MiniCssExtractPlugin.loader,
                   'css-loader',
                   'sass-loader'
               ]

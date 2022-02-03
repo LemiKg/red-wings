@@ -1,13 +1,12 @@
-.kragujevac1-mapa {
+.location {
     width: 100%;
 
     .section-heading {
         background-image: url(../images/kragujevacs1.webp);
-        margin-top: 200px;
-        margin-bottom: 50px;
+        margin-top: 15%;
     }
 
-    .kg1-map {
+    .map {
         display: flex;
         flex-direction: column;
         padding: 20px;

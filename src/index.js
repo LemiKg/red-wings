@@ -1,6 +1,4 @@
 import './assets/scss/style.scss';
-import '@glidejs/glide/dist/css/glide.core.min.css';
-import '@fortawesome/fontawesome-free/css/all.css';
 import Glide from '@glidejs/glide';
 
 import { Loader } from '@googlemaps/js-api-loader';
@@ -16,7 +14,7 @@ const cover = new Glide('.cover', {
 
 const stations = new Glide('.stations', {
     type: 'carousel',
-    startAt: 0,
+    startAt: 1,
     perView: 2,
     gap: 50,
     peek: 20,
@@ -34,7 +32,7 @@ const displayResponsiveNav = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     cover.mount();
-    cover.destroy();
+    // cover.destroy();
     stations.mount();
     
     const hamburger = document.querySelector('.hamburger');
