@@ -4,12 +4,13 @@
         width: 90%;
         margin: 20px auto;
 
-        @media only screen and ($tablet) {
-            width: fit-content;
+        @media only screen and ($desktop) {
+            width: 60%;
         }
 
         img {
             width: 100%;
+            border-radius: 15px;
         }
 
         .main-button {

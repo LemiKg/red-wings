@@ -9,14 +9,30 @@
             width: 80%;
             margin: auto;
         }
-    }
-    li {
-        height: auto;
 
-        img {
-            width: 100%;
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+            color: $secondary-color;
         }
+        
+        .swiper-button-prev {
+            left: 30px;
+        }
+
+        .swiper-button-next {
+            right: 30px;
+        }
+
+        .swiper {
+            padding: 0 20px;
+        }
+
     }
+
+    img {
+        width: 100%;
+    }
+
 
     .controls {
         font-size: 2.5rem;

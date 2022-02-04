@@ -1,6 +1,10 @@
+// @import '@glidejs/glide/dist/css/glide.core.min.css';
+// @import '@glidejs/glide/dist/css/glide.theme.min.css';
+ // import Swiper styles
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 @import 'common/all';
 @import 'components/all';
 @import 'pages/all';
-@import '@glidejs/glide/dist/css/glide.core.min.css';
-@import '@glidejs/glide/dist/css/glide.theme.min.css';
 @import '@fortawesome/fontawesome-free/css/all.css';

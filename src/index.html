@@ -5,8 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Wings</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" 
+        integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css" 
+        integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+        <!-- Primary Meta Tags -->
+    <title>Red Wings - Daje ti Krilca!</title>
+    <meta name="title" content="Red Wings - Daje ti Krilca!">
+    <meta name="description" content=" Mi u red wingsu smo jedna velika porodica koja je nastala iz ljubavi prema dobroj hrani,  
+                            i već godinama unazad radimo na stvaranju prepoznatljivog brenda. Čvrsto verujemo da bez kvalitetnih 
+                            i svežih namirnica nema dobre klope. Radimo isključivo sa pilećim mesom koje kupujemo od domaćih 
+                            proizvođača, ručno ga svakodnevno obrađujemo, paniramo i pržimo i zato do tebe stiže uvek i samo sveže. 
+                            Potpuno smo posvećeni detaljima i garantujemo da su svi naši ukusi savršeno izbalansirani. 
+                            Poslujemo u tri grada, i na četiri lokacije, i intezivno radimo na daljem širenju lanca restorana u Srbiji.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Red Wings - Daje ti Krilca!">
+    <meta property="og:description" content=" Mi u red wingsu smo jedna velika porodica koja je nastala iz ljubavi prema dobroj hrani,  
+                            i već godinama unazad radimo na stvaranju prepoznatljivog brenda. Čvrsto verujemo da bez kvalitetnih 
+                            i svežih namirnica nema dobre klope. Radimo isključivo sa pilećim mesom koje kupujemo od domaćih 
+                            proizvođača, ručno ga svakodnevno obrađujemo, paniramo i pržimo i zato do tebe stiže uvek i samo sveže. 
+                            Potpuno smo posvećeni detaljima i garantujemo da su svi naši ukusi savršeno izbalansirani. 
+                            Poslujemo u tri grada, i na četiri lokacije, i intezivno radimo na daljem širenju lanca restorana u Srbiji.">
+    <!-- <meta property="og:image" content="assets/images/kg-stanica.webp"> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Red Wings - Daje ti Krilca!">
+    <meta property="twitter:description" content=" Mi u red wingsu smo jedna velika porodica koja je nastala iz ljubavi prema dobroj hrani,  
+                            i već godinama unazad radimo na stvaranju prepoznatljivog brenda. Čvrsto verujemo da bez kvalitetnih 
+                            i svežih namirnica nema dobre klope. Radimo isključivo sa pilećim mesom koje kupujemo od domaćih 
+                            proizvođača, ručno ga svakodnevno obrađujemo, paniramo i pržimo i zato do tebe stiže uvek i samo sveže. 
+                            Potpuno smo posvećeni detaljima i garantujemo da su svi naši ukusi savršeno izbalansirani. 
+                            Poslujemo u tri grada, i na četiri lokacije, i intezivno radimo na daljem širenju lanca restorana u Srbiji.">
+    <!-- <meta property="twitter:image" content="redwings.rs/assets/"> -->
 </head>
-<body class="landing">
+<body class="landing" id="landing">
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -58,9 +97,9 @@
                 <li class="glide__slide">
                     <img src="assets/images/cover1.webp" alt="cover image">
                 </li>
-                <li class="glide__slide">
+                <!-- <li class="glide__slide">
                     <img src="assets/images/cover.webp" alt="cover image kofica">
-                </li>
+                </li> -->
             </ul>
         </div>
     </section>
@@ -72,57 +111,51 @@
                     FAST FOOD STANICE
                 </h1>
             </div>
-            <div data-glide-el="track" class="glide__track">
-                <ul class="glide__slides">
-                    <li class="glide__slide">
-                        <div class="station ribbon-wrapper">
-                            <div id="ribbon-container">
-                                <p id="ribbon">KRAGUJEVAC</p>
-                             </div>
-                            <img src="assets/images/beograd.webp" alt="station image">
-                            <div class="main-button stations-btn">
-                                <a href="kragujevac.html">
-                                    <input type="button" value="Pogledaj">
-                                </a>
-                            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <div class="station ribbon-wrapper">
+                        <div id="ribbon-container">
+                            <p id="ribbon">KRAGUJEVAC</p>
                         </div>
-                    </li>
-                    <li class="glide__slide">
-                        <div class="station ribbon-wrapper">
-                            <div id="ribbon-container">
-                                <p id="ribbon">KRAGUJEVAC 1</p>
-                             </div>
-                            <img src="assets/images/kragujevac.webp" alt="station image">
-                            <div class="main-button stations-btn">
-                                <a href="kragujevac1.html">
-                                    <input type="button" value="Pogledaj">
-                                </a>
-                            </div>
+                        <img src="assets/images/kg-stanica.webp" alt="station kragujevac image">
+                        <div class="main-button stations-btn">
+                            <a href="kragujevac.html">
+                                <input type="button" value="Pogledaj">
+                            </a>
                         </div>
-                    </li>
-                    <li class="glide__slide">
-                        <div class="station ribbon-wrapper">
-                            <div id="ribbon-container">
-                                <p id="ribbon">BEOGRAD</p>
-                             </div>
-                            <img src="assets/images/beograd.webp" alt="station image">
-                            <div class="main-button stations-btn">
-                                <a href="beograd.html">
-                                    <input type="button" value="Pogledaj">
-                                </a>
-                            </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="station ribbon-wrapper">
+                        <div id="ribbon-container">
+                            <p id="ribbon">BEOGRAD</p>
                         </div>
-                    </li>
-                </ul>
-                <div class="bulets" data-glide-el="controls[nav]">
-                    <button class="glide__bullet" data-glide-dir="=0"></button>
-                    <button class="glide__bullet" data-glide-dir="=1"></button>
-                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                        <img src="assets/images/bg-stanica.webp" alt="station belgrade image">
+                        <div class="main-button stations-btn">
+                            <a href="beograd.html">
+                                <input type="button" value="Pogledaj">
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="station ribbon-wrapper">
+                        <div id="ribbon-container">
+                            <p id="ribbon">KRAGUJEVAC 1</p>
+                        </div>
+                        <img src="assets/images/kg1-stanica.webp" alt="station kragujevac image">
+                        <div class="main-button stations-btn">
+                            <a href="kragujevac1.html">
+                                <input type="button" value="Pogledaj">
+                            </a>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-            </div>
-            <div class="controls" data-glide-el="controls">
-                <span class="left" data-glide-dir="<"><i class="fas fa-chevron-left"></i></span>
-                <span class="right" data-glide-dir=">"><i class="fas fa-chevron-right"></i></span>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -263,17 +296,6 @@
                     </div>
                 </a>
             </section>
-            
-            <section class="beograd city-station">
-                <a target="_blank" href="https://fabrikahrane.bitebell.com/public/pf">
-                    <div class="ribbon-wrapper">
-                        <div id="ribbon-container">
-                            <p id="ribbon">PARAĆIN</p>
-                        </div>
-                        <img src="assets/images/beograd.webp" alt="stanica PARAĆIN">
-                    </div>
-                </a>
-            </section>
         </div>
         </section>
         
@@ -315,17 +337,6 @@
                     <p>11000 Beograd</p>
                     <a href="tel:+381607066336">060/70-66-336</a>
             </div>
-            <div class="pr col">
-                <div class="heading">
-                    <h1>Paraćin</h1>
-                </div>
-                <p>Radno vreme</p>
-                <p>8 - 00 h</p>
-                <p>Kralja Petra I 26</p>
-                <a href="mailto:redwings@mts.rs?subject=Kako vam mozemo pomoci?">redwings@mts.rs</a>
-                <p>35250 Paraćin</p>
-                <a href="tel:+381607066336">065/223-84-82</a>
-            </div>
             <div class="social col">
                 <a href="#">
                     <span class="icon"><i class="fab fa-instagram"></i></span>
@@ -338,6 +349,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
