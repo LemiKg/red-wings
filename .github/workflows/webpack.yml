@@ -13,5 +13,6 @@ jobs:
     steps:
     - name: Build
       run: |
+        cd $GITHUB_WORKSPACE
         npm install
         npx webpack
