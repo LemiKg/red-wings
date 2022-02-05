@@ -69,5 +69,9 @@ a {
         text-transform: uppercase;
         color: $light-color;
         font-family: $navigation-font;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

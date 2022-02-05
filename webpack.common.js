@@ -17,8 +17,8 @@ module.exports = {
         filename: 'kragujevac.html'
       }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src', 'kragujevac1.html'),
-        filename: 'kragujevac1.html'
+        template: path.resolve(__dirname, 'src', 'kragujevac-big.html'),
+        filename: 'kragujevac-big.html'
       }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src', 'beograd.html'),

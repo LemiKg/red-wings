@@ -1,5 +1,4 @@
 import './assets/scss/style.scss';
-import Glide from '@glidejs/glide';
 // import 'dotenv/config';
 
 import { Loader } from '@googlemaps/js-api-loader';
@@ -31,45 +30,16 @@ const stations = new Swiper('.swiper', {
 	}
 });
 
-const cover = new Glide('.cover', {
-    type: 'carousel',
-    autoplay: 6000,
-    focusAt: '1',
-    startAt: 1,
-    perView: 1,
-    gap: 0
-});
-
-// const stations = new Glide('.stations', {
-//     type: 'carousel',
-//     startAt: 1,
-//     perView: 2,
-//     gap: 50,
-//     peek: 20,
-//     breakpoints: {
-//         1024: {
-//             perView: 1
-//         }
-//     }
-// });
-
 const displayResponsiveNav = () => {
     const menu = document.querySelector('.mobile-nav');
     menu.classList.add('active');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    const sliders = document.querySelectorAll('.glide__track');
 	const kragujevac = document.querySelector('#kragujevac');
-	const kragujevac1 = document.querySelector('#kragujevac1');
+	const kragujevac2 = document.querySelector('#kragujevac-big');
 	const beograd = document.querySelector('#beograd');
 	const landing = document.querySelector('#landing');
-
-    if (sliders.length > 0) {
-      cover.mount();
-      cover.destroy();
-    }
 
     const hamburger = document.querySelector('.hamburger');
     const modal = document.querySelector('#modal');
@@ -98,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				lat: parseFloat(44.014852284600266),
 				lng: parseFloat(20.913090546027835)
 			}
-		} else if (kragujevac1) {
+		} else if (kragujevac2) {
 			center = {
 				lat: parseFloat(44.00959855726816),
 				lng: parseFloat(20.89746522717582)
