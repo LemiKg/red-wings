@@ -98,12 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const loader = new Loader({
-    apiKey: 'AIzaSyBFgW7nlikqF2g-iO9J2y-iy7L5K0Yf1YU',
+    apiKey: process.env.API,
     version: 'weekly',
     libraries: ['places']
 });
-
-console.log(process.env.API);
 
 const mapOptions = {
     styles: [
