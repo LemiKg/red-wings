@@ -1,6 +1,19 @@
 .header {
     background: url(../images/Header.webp) no-repeat center center;
     background-size: cover;
+
+    .order-button {
+
+        input {
+            box-shadow: $box-shadow;
+            border-radius: 10px;
+
+            &:hover {
+                background: darken($secondary-color, 5%);
+                transition: .2s;
+            } 
+        }
+    }
     
     .container {
         position: relative;

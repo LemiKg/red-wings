@@ -2,10 +2,10 @@ import './assets/scss/style.scss';
 // import 'dotenv/config';
 
 import { Loader } from '@googlemaps/js-api-loader';
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 const stations = new Swiper('.swiper', {
-    modules: [Navigation, Pagination],
+  modules: [Navigation, Pagination],
 	direction: 'horizontal',
 	loop: true,
 	slidesPerView: 2,
@@ -16,18 +16,28 @@ const stations = new Swiper('.swiper', {
 	},
 	breakpoints: {
 	  '@0.00': {
-		slidesPerView: 1,
-		spaceBetween: 40
-	  },
-	  '@0.75': {
-		slidesPerView: 2,
-		spaceBetween: 40
+      slidesPerView: 1,
+      spaceBetween: 40
 	  },
 	  '@1.00': {
-		slidesPerView: 2,
-		spaceBetween: 40
+      slidesPerView: 1,
+      spaceBetween: 40
+	  },
+	  '@1.50': {
+      slidesPerView: 2,
+      spaceBetween: 40
 	  }
 	}
+});
+
+const cover = new Swiper('.swiper-cover', {
+  modules: [Autoplay],
+	direction: 'horizontal',
+  autoplay: {
+    delay: 5000
+  },
+	loop: true,
+	slidesPerView: 1
 });
 
 const displayResponsiveNav = () => {
@@ -75,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		} else if (beograd) {
 			center = {
-				lat: parseFloat(44.015487739645124),
-				lng: parseFloat(20.94179649834058)
+				lat: parseFloat(44.78245356658591),
+				lng: parseFloat(20.512017113464786)
 			}
 		}
 
