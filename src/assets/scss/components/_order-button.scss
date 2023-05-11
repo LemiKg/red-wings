@@ -1,14 +1,48 @@
 .btn {
-    font-size: .8em;
-    background-color: $secondary-color;
-    border: 0;
-    border-radius: 10px;
-    padding: 15px 40px;
-    text-transform: uppercase;
-    color: $light-color;
-    font-family: $navigation-font;
+  font-size: 0.8em;
+  background-color: $secondary-color;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  color: $light-color;
+  font-family: $navigation-font;
+  position: relative;
 
-    &:hover {
-        cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.disabled {
+    background-color: $disabled-color;
+    color: $dark-color;
+  }
+
+  &.orderBtn {
+    font-size: 0.6rem;
+    padding: 10px 5px;
+
+    &:last-of-type {
+      margin-right: 10px;
     }
+
+    @media only screen and ($desktop) {
+      font-size: 0.8rem;
+      padding: 15px 20px;
+    }
+  }
+}
+
+.popup {
+  position: absolute;
+  text-transform: none;
+  text-shadow: none;
+  bottom: -86%;
+  right: 10px;
+  transform: translateY(5px);
+  background-color: $secondary-color;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 9px 1px $dark-color;
+  z-index: 1000;
 }

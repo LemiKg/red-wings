@@ -1,130 +1,132 @@
 .header {
-    background: url(../images/Header.webp) no-repeat center center;
-    background-size: cover;
+  background: url(../images/Header.webp) no-repeat center center;
+  background-size: cover;
+
+  .order-button {
+    input {
+      box-shadow: $box-shadow;
+      border-radius: 10px;
+
+      &:hover {
+        background: darken($secondary-color, 5%);
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media only screen and ($desktop) {
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    img {
+      width: 80%;
+    }
+
+    .ribbon {
+      width: 20%;
+      background-color: transparent;
+      position: absolute;
+      left: 3%;
+      top: -350px;
+      animation: ribbonDrop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      @media only screen and ($desktopXXXXL) {
+        left: -5%;
+      }
+    }
+  }
+
+  .navigation {
+    text-transform: uppercase;
+    display: none;
+    align-items: center;
+    font-family: $navigation-font;
+
+    .nav-item {
+      color: $dark-color;
+      padding: 20px 10px;
+      font-size: 1em;
+      font-weight: 900;
+
+      @media only screen and ($desktopXXL) {
+        padding: 60px 40px;
+        font-size: 1.3em;
+
+        &.order-button {
+          padding: 15px 10px;
+        }
+      }
+    }
+
+    @media only screen and ($desktop) {
+      display: flex;
+    }
+  }
+
+  /* Responsive Navigation */
+
+  .responsive-navigation {
+    display: flex;
+
+    .hamburger {
+      display: none;
+      position: absolute;
+      right: 0px;
+      font-size: 2em;
+      top: 10%;
+      padding: 20px;
+    }
 
     .order-button {
-
-        input {
-            box-shadow: $box-shadow;
-            border-radius: 10px;
-
-            &:hover {
-                background: darken($secondary-color, 5%);
-                transition: .2s;
-            } 
-        }
-    }
-    
-    .container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @media only screen and ($desktop) {
-            justify-content: space-between;
-        }
+      margin: 20px 0;
     }
 
-    .logo {
-
-        img {
-            width: 80%;
-        }
-        
-        .ribbon {
-            width: 20%;
-            background-color: transparent;
-            position: absolute;
-            left: 3%;
-            top: -350px;
-            animation: ribbonDrop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-            @media only screen and ($desktopXXXXL) {
-                left: -5%;
-            }
-        }
+    @media only screen and ($desktop) {
+      display: none;
     }
+  }
 
-    .navigation {
-        text-transform: uppercase;
-        display: none;
-        align-items: center;
-        font-family: $navigation-font;
-        
-        .nav-item {
-            color: $dark-color;
-            padding: 20px 10px;
-            font-size: 1em;
-            font-weight: 900;
+  .mobile-nav {
+    display: none;
 
-            @media only screen and ($desktopXXL) {
-                padding: 60px 40px;
-                font-size: 1.3em;
-            }
-        }
-
-        @media only screen and ($desktop) {
-            display: flex;
-        }
+    &.active {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 20%;
+      left: 0;
+      background-color: $light-color;
+      z-index: 4;
     }
+  }
 
-    /* Responsive Navigation */
+  /* Logo Animation */
 
-    .responsive-navigation {
-        display: flex;
-
-        .hamburger {
-            display: none;
-            position: absolute;
-            right: 0px;
-            font-size: 2em;
-            top: 10%;
-            padding: 20px;
-        }
-
-        .order-button {
-            margin: 20px 0;
-        }
-
-        @media only screen and ($desktop) {
-            display: none;
-        }
+  @keyframes ribbonDrop {
+    0% {
+      top: -350px;
     }
-
-    .mobile-nav {
-        display: none;
-
-        &.active {
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            right: 20%;
-            left: 0;
-            background-color: $light-color;
-            z-index: 4;
-        }
+    100% {
+      top: 0;
     }
+  }
 
-    /* Logo Animation */
-
-    @keyframes ribbonDrop {
-        0% {
-            top: -350px;
-        }
-        100% {
-            top: 0;
-        }
+  @keyframes headerDrop {
+    0% {
+      top: -200px;
     }
-
-    @keyframes headerDrop {
-        0% {
-            top: -200px;
-        }
-        100% {
-            top: 0;
-        }
+    100% {
+      top: 0;
     }
+  }
 }
